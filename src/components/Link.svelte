@@ -1,24 +1,44 @@
 <script>
+    import {push, pop, replace} from 'svelte-spa-router';
+
     export let href;
+    export let method = "push";
+
+    function anchor(){
+        switch(method){
+            case "push":
+                push(href);
+                break;
+            case "pop":
+                pop(href);
+                break;
+            case "replace":
+                replace(href);
+                break;
+            default:
+                console.log("INVALID METHOD FOR LINK TO: " + href);
+                break;
+        }
+    }
 </script>
 
-<a {href}><slot/></a>
+<span on:click={anchor}><slot/></span>
 
 <style>
-    a {
+    span {
         text-decoration: none;
     }
 
-    a:link{
+    span:link{
         color: black;
     }
     
-    a:hover {
+    span:hover {
         transform: scale(0.98);
         color: rgb(100, 100, 100);
     }
 
-    a:active{
+    span:active{
         color: rgb(150,150,150);
     }
 

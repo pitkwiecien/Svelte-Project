@@ -18,9 +18,9 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
-    "node-sass": "^7.0.1",
     "scss-tokenizer": "^0.4.2",
     "sirv-cli": "^2.0.0",
-    "svelte-preprocess": "^4.10.7"
+    "svelte-preprocess": "^4.10.7",
+    "svelte-spa-router": "^3.3.0"
   }
 }
