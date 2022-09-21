@@ -34,6 +34,7 @@
     }
     
     span:hover {
+        cursor: pointer;
         transform: scale(0.98);
         color: rgb(100, 100, 100);
     }

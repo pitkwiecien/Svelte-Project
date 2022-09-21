@@ -1,12 +1,10 @@
 <script>
     import Button from "../components/Button.svelte";
     import MainTag from "../components/MainTag.svelte";
-    import FilledFixedBar from "../components/FilledFixedBar.svelte";
     import MiddleElement from "../components/MiddleElement.svelte";
 </script>
     
 <MainTag imageSrc="/images/background.png">
-    <FilledFixedBar/>
     <MiddleElement>
         <div id="middle-text">Połącz pasje!</div>
         <div id="middle-button">

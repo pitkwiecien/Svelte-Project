@@ -33,7 +33,7 @@
         <slot name="left"/>
     </div>
     <div id="right">
-        <slot name="right" style="background-color: azule;"/>
+        <slot name="right"/>
     </div>
 </div>
 {#if generateSafeArea}
@@ -51,6 +51,7 @@
         padding: 5px;
         font-size: var(--font-size);
         font-weight: var(--font-weight);
+        z-index: 10000000;
     }
 
     #safeArea {
