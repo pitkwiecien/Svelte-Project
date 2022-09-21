@@ -3,6 +3,7 @@
 
     export let number;
     export let image;
+    export let imageAlt;
 
     let left = number % 2 == 1
     let stPosition
@@ -21,7 +22,7 @@
     <div id="stepBody">
         <div id="title">
             <div id="numberImage" style="{stPosition}">
-                <Image src=/images/circle_{number}.png alt={number} scaling=0.5/>
+                <Image src="/images/circle_{number}.png" alt={number} scaling=0.5/>
             </div>
             <slot name="title"/>
         </div>
