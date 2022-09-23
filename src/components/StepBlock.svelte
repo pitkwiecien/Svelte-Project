@@ -1,9 +1,24 @@
 <script>
     import Image from "./Image.svelte";
+    import {aboutElems} from "../../scripts/stores"
 
-    export let number;
+    /*
     export let image;
     export let imageAlt;
+    */
+    //EXPORT number
+
+    let aboutElemsValue;
+
+    aboutElems.subscribe(value => {
+        aboutElemsValue = value;
+    });
+
+    console.log(aboutElemsValue)
+
+    export let number = aboutElemsValue;
+
+    aboutElems.update(n => n + 1)
 
     let left = number % 2 == 1
     let stPosition
@@ -24,6 +39,7 @@
             <div id="numberImage" style="{stPosition}">
                 <Image src="/images/circle_{number}.png" alt={number} scaling=0.5/>
             </div>
+            
             <slot name="title"/>
         </div>
         <div id="main">
